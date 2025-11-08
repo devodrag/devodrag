@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>devodrag</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --accent: #58a6ff;
+            --green: #238636;
+            --red: #da3633;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px 30px;
+            background-color: var(--card);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
+        .nickname {
+            font-size: 1.6em;
+            color: var(--accent);
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .loading {
+            color: #8b949e;
+            font-style: italic;
+            margin-bottom: 24px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        h1 {
+            color: #f0f6fc;
+            margin: 0 0 32px 0;
+            font-size: 2.8em;
+            font-weight: 800;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        ul {
+            list-style: none;
+            text-align: left;
+            margin: 0 auto;
+            max-width: 500px;
+        }
+
+        li {
+            margin-bottom: 16px;
+            padding: 14px 16px;
+            background-color: #21262d;
+            border-left: 5px solid var(--accent);
+            border-radius: 0 10px 10px 0;
+            transition: all 0.3s ease;
+            font-size: 1.05em;
+        }
+
+        li:hover {
+            background-color: #30363d;
+            transform: translateX(4px);
+            box-shadow: 0 2px 8px rgba(88, 166, 255, 0.2);
+        }
+
+        li strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--green);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+            min-width: 160px;
+            justify-content: center;
+        }
+
+        .btn:hover {
+            background-color: #2ea043;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+        }
+
+        .btn.telegram {
+            background-color: #229ED9;
+        }
+
+        .btn.telegram:hover {
+            background-color: #3ab0e2;
+        }
+
+        .btn.heroku {
+            background-color: #79589F;
+        }
+
+        .btn.heroku:hover {
+            background-color: #8a6ab0;
+        }
+
+        .btn i {
+            font-size: 1.2em;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border), transparent);
+            margin: 36px 0;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 24px 16px;
+                margin: 10px;
+            }
+            h1 {
+                font-size: 2.2em;
+            }
+            .links {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn {
+                width: 100%;
+                max-width: 240px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nickname">@devodrag</div>
+        <div class="loading">Loading . . .</div>
+        <h1>devodrag</h1>
+        
+        <ul>
+            <li><strong>Никнеймы:</strong> devodrag</li>
+            <li><strong>Языки:</strong> Python, JavaScript, TypeScript, HTML, CSS</li>
+            <li><strong>Особенность:</strong> i use heroku userbot</li>
+        </ul>
+
+        <div class="links">
+            <a href="https://t.me/devodrag" class="btn telegram" target="_blank">
+                <i class="fab fa-telegram-plane"></i> Telegram
+            </a>
+            <a href="https://t.me/heroku_ub" class="btn heroku" target="_blank">
+                <i class="fas fa-robot"></i> Heroku UB
+            </a>
+        </div>
+
+        <hr>
+    </div>
+</body>
+</html>
