@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>devodrag</title>
+    <title>devodrag | bio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         :root {
-            --bg: #0d1117;
-            --card: #161b22;
-            --border: #30363d;
-            --text: #c9d1d9;
-            --accent: #58a6ff;
-            --green: #238636;
-            --red: #da3633;
+            --bg: #0a0a0a;
+            --card: #111;
+            --border: #222;
+            --text: #e0f7ff;
+            --neon: #00d4ff;
+            --neon-dark: #0099cc;
+            --glow: 0 0 8px var(--neon), 0 0 16px var(--neon), 0 0 24px var(--neon);
+            --soft-glow: 0 0 4px rgba(0, 212, 255, 0.4);
         }
 
         * {
@@ -32,77 +33,151 @@
             align-items: center;
             min-height: 100vh;
             padding: 20px;
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 600px;
+            max-width: 620px;
             width: 100%;
             text-align: center;
-            border: 1px solid var(--border);
-            border-radius: 16px;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 18px;
             padding: 40px 30px;
-            background-color: var(--card);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s ease;
+            background: linear-gradient(135deg, #111, #0a0a0a);
+            box-shadow: var(--glow), inset 0 0 30px rgba(0, 212, 255, 0.1);
+            position: relative;
+            z-index: 1;
         }
 
-        .container:hover {
-            transform: translateY(-5px);
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: linear-gradient(45deg, var(--neon), var(--neon-dark), var(--neon));
+            border-radius: 20px;
+            z-index: -1;
+            filter: blur(8px);
+            opacity: 0.7;
+            animation: borderPulse 3s infinite;
+        }
+
+        @keyframes borderPulse {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+
+        .avatar {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 3px solid var(--neon);
+            box-shadow: var(--glow);
+            object-fit: cover;
         }
 
         .nickname {
-            font-size: 1.6em;
-            color: var(--accent);
+            font-size: 1.7em;
+            color: var(--neon);
             margin-bottom: 8px;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 1.2px;
+            text-shadow: var(--glow);
+            animation: neonPulse 2s infinite;
+        }
+
+        @keyframes neonPulse {
+            0%, 100% { text-shadow: var(--glow); }
+            50% { text-shadow: 0 0 12px var(--neon), 0 0 24px var(--neon), 0 0 36px var(--neon); }
         }
 
         .loading {
-            color: #8b949e;
+            color: #66aabb;
             font-style: italic;
             margin-bottom: 24px;
             animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 0.6; }
+            0%, 100% { opacity: 0.7; }
             50% { opacity: 1; }
         }
 
         h1 {
-            color: #f0f6fc;
-            margin: 0 0 32px 0;
-            font-size: 2.8em;
+            color: #ffffff;
+            margin: 0 0 20px 0;
+            font-size: 2.9em;
             font-weight: 800;
-            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+            text-shadow: var(--soft-glow);
+        }
+
+        .bio {
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .bio-item {
+            display: block;
+            margin-bottom: 6px;
+            color: #a0eaff;
+            text-shadow: 0 0 3px rgba(0, 212, 255, 0.5);
+        }
+
+        .bot-card {
+            background: rgba(0, 212, 255, 0.05);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 12px;
+            padding: 16px;
+            margin: 22px 0;
+            text-align: left;
+            box-shadow: var(--soft-glow);
+            transition: all 0.3s ease;
+        }
+
+        .bot-card:hover {
+            box-shadow: var(--glow);
+            border-color: var(--neon);
+            transform: translateY(-2px);
+        }
+
+        .bot-title {
+            font-size: 1.25em;
+            color: var(--neon);
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .bot-stats {
+            color: #88ccff;
+            font-size: 0.9em;
+            margin-bottom: 4px;
         }
 
         ul {
             list-style: none;
             text-align: left;
-            margin: 0 auto;
+            margin: 20px auto;
             max-width: 500px;
         }
 
         li {
             margin-bottom: 16px;
             padding: 14px 16px;
-            background-color: #21262d;
-            border-left: 5px solid var(--accent);
+            background: rgba(0, 212, 255, 0.05);
+            border-left: 4px solid var(--neon);
             border-radius: 0 10px 10px 0;
             transition: all 0.3s ease;
             font-size: 1.05em;
+            box-shadow: var(--soft-glow);
         }
 
         li:hover {
-            background-color: #30363d;
-            transform: translateX(4px);
-            box-shadow: 0 2px 8px rgba(88, 166, 255, 0.2);
+            box-shadow: var(--glow);
+            transform: translateX(5px);
         }
 
         li strong {
-            color: var(--accent);
+            color: var(--neon);
             font-weight: 600;
         }
 
@@ -111,100 +186,213 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 14px;
-            margin-top: 30px;
+            margin: 30px 0;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background-color: var(--green);
-            color: white;
-            padding: 12px 24px;
+            background: linear-gradient(45deg, var(--neon-dark), var(--neon));
+            color: #000;
+            padding: 12px 26px;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 10px;
             font-weight: 600;
             font-size: 1em;
             transition: all 0.3s ease;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
-            min-width: 160px;
+            box-shadow: var(--glow);
+            min-width: 170px;
             justify-content: center;
+            border: none;
+            cursor: pointer;
         }
 
         .btn:hover {
-            background-color: #2ea043;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 0 25px var(--neon), 0 0 40px var(--neon);
         }
 
-        .btn.telegram {
-            background-color: #229ED9;
+        .btn.donate {
+            background: linear-gradient(45deg, #ff00aa, #ff3399);
+            color: white;
         }
 
-        .btn.telegram:hover {
-            background-color: #3ab0e2;
-        }
-
-        .btn.heroku {
-            background-color: #79589F;
-        }
-
-        .btn.heroku:hover {
-            background-color: #8a6ab0;
+        .btn.donate:hover {
+            box-shadow: 0 0 20px #ff3399, 0 0 35px #ff0088;
         }
 
         .btn i {
             font-size: 1.2em;
         }
 
+        /* Overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal {
+            background: #111;
+            border: 1px solid var(--neon);
+            border-radius: 16px;
+            padding: 30px;
+            max-width: 420px;
+            width: 90%;
+            text-align: center;
+            box-shadow: var(--glow);
+            position: relative;
+        }
+
+        .modal h2 {
+            color: var(--neon);
+            margin-bottom: 20px;
+            text-shadow: var(--soft-glow);
+        }
+
+        .close {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            color: var(--neon);
+            font-size: 26px;
+            cursor: pointer;
+            text-shadow: var(--soft-glow);
+        }
+
         hr {
             border: none;
             height: 1px;
-            background: linear-gradient(to right, transparent, var(--border), transparent);
+            background: linear-gradient(to right, transparent, var(--neon), transparent);
             margin: 36px 0;
+            filter: drop-shadow(0 0 3px var(--neon));
         }
 
         @media (max-width: 480px) {
-            .container {
-                padding: 24px 16px;
-                margin: 10px;
-            }
-            h1 {
-                font-size: 2.2em;
-            }
-            .links {
-                flex-direction: column;
-                align-items: center;
-            }
-            .btn {
-                width: 100%;
-                max-width: 240px;
-            }
+            .container { padding: 24px 16px; }
+            h1 { font-size: 2.2em; }
+            .links { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 260px; }
         }
     </style>
 </head>
 <body>
+
     <div class="container">
+        <img src="avatar.jpg" alt="Avatar" class="avatar"> <!-- Загрузи своё фото как avatar.jpg -->
         <div class="nickname">@devodrag</div>
         <div class="loading">Loading . . .</div>
         <h1>devodrag</h1>
         
+        <div class="bio">
+            <span class="bio-item">From: Russia</span>
+            <span class="bio-item">Python Developer</span>
+        </div>
+
         <ul>
             <li><strong>Никнеймы:</strong> devodrag</li>
             <li><strong>Языки:</strong> Python, JavaScript, TypeScript, HTML, CSS</li>
             <li><strong>Особенность:</strong> i use heroku userbot</li>
         </ul>
 
+        <!-- Карточки ботов -->
+        <div class="bot-card">
+            <div class="bot-title">Crypto Bot</div>
+            <div class="bot-stats">2 181 008 monthly users</div>
+            <div>Use @CryptoBot to buy, sell, store, @send and pay with cryptocurrency right in Telegram.</div>
+        </div>
+
+        <div class="bot-card">
+            <div class="bot-title">xRocket</div>
+            <div class="bot-stats">1 240 942 monthly users</div>
+            <div>#1 CEX & SocialFi platform on Telegram.</div>
+            <div>@xrocketnews — news channel</div>
+        </div>
+
         <div class="links">
-            <a href="https://t.me/devodrag" class="btn telegram" target="_blank">
-                <i class="fab fa-telegram-plane"></i> Telegram
+            <a href="https://t.me/devodrag" class="btn" target="_blank">
+                Telegram
             </a>
-            <a href="https://t.me/heroku_ub" class="btn heroku" target="_blank">
-                <i class="fas fa-robot"></i> Heroku UB
-            </a>
+            <button class="btn donate" onclick="openDonate()">
+                Donate
+            </button>
         </div>
 
         <hr>
     </div>
+
+    <!-- Donate Overlay -->
+    <div id="donateOverlay" class="overlay">
+        <div class="modal">
+            <span class="close" onclick="closeDonate()">×</span>
+            <h2>Выбери способ доната</h2>
+            <div class="links">
+                <a href="https://t.me/send?start=IVZIFRT5CKMx" class="btn" target="_blank">
+                    CryptoBot
+                </a>
+                <button class="btn" onclick="openXRocket()">
+                    xRocket
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- xRocket Submenu -->
+    <div id="xrocketOverlay" class="overlay">
+        <div class="modal">
+            <span class="close" onclick="closeXRocket()">×</span>
+            <h2>xRocket</h2>
+            <div class="links">
+                <a href="https://t.me/xrocket?start=inv_Rnhh88Q1gY7AxsR" class="btn" target="_blank">
+                    xRocket USDT
+                </a>
+                <a href="https://t.me/xrocket?start=inv_ip2bPuPJK0MNYFU" class="btn" target="_blank">
+                    xRocket TON
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openDonate() {
+            document.getElementById('donateOverlay').style.display = 'flex';
+        }
+
+        function closeDonate() {
+            document.getElementById('donateOverlay').style.display = 'none';
+        }
+
+        function openXRocket() {
+            closeDonate();
+            setTimeout(() => {
+                document.getElementById('xrocketOverlay').style.display = 'flex';
+            }, 300);
+        }
+
+        function closeXRocket() {
+            document.getElementById('xrocketOverlay').style.display = 'none';
+        }
+
+        // Закрытие по клику вне модалки
+        window.addEventListener('click', (e) => {
+            const donate = document.getElementById('donateOverlay');
+            const xrocket = document.getElementById('xrocketOverlay');
+            if (e.target === donate) closeDonate();
+            if (e.target === xrocket) closeXRocket();
+        });
+    </script>
 </body>
 </html>
