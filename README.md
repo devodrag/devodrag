@@ -15,12 +15,11 @@
     <code><b>( • ) SYSTEM ONLINE &nbsp;|&nbsp; KERNEL 0x7F &nbsp;|&nbsp; BACKEND ARCHITECT</b></code>
   </p>
 
-  <!-- Social Badges + Minimalist Views Counter -->
+  <!-- Social & Contact Badges -->
   <p align="center">
     <a href="https://t.me/tabyru"><img src="https://img.shields.io/badge/TELEGRAM-@tabyru-0D0D0D?style=for-the-badge&logo=telegram&logoColor=white&labelColor=000000" alt="Telegram" /></a>&nbsp;
     <a href="https://x.com/devodrag"><img src="https://img.shields.io/badge/X-@devodrag-0D0D0D?style=for-the-badge&logo=x&logoColor=white&labelColor=000000" alt="X" /></a>&nbsp;
-    <a href="https://discord.com"><img src="https://img.shields.io/badge/DISCORD-swift.dat-0D0D0D?style=for-the-badge&logo=discord&logoColor=white&labelColor=000000" alt="Discord" /></a>&nbsp;
-    <a href="https://github.com/devodrag"><img src="https://komarev.com/ghpvc/?username=devodrag&label=VIEWS&color=0D0D0D&style=for-the-badge" alt="Views" /></a>
+    <a href="https://discord.com"><img src="https://img.shields.io/badge/DISCORD-swift.dat-0D0D0D?style=for-the-badge&logo=discord&logoColor=white&labelColor=000000" alt="Discord" /></a>
   </p>
 
   <br/>
