@@ -7,9 +7,7 @@
 
   <!-- Dynamic Typing Subtitle (Console Style) -->
   <p align="center">
-    <a href="https://github.com/devodrag">
-      <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=15&pause=1200&color=FFFFFF&center=true&vCenter=true&width=550&lines=%3E+Architecting+distributed+%26+high-load+systems;%3E+High-concurrency+engines+in+C%2B%2B+%26+Go;%3E+Backend+microservices+with+C%23+%26+Python;%3E+Zero-cost+abstractions+%26+clean+code" alt="Typing SVG" />
-    </a>
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=15&pause=1200&color=FFFFFF&center=true&vCenter=true&width=550&lines=%3E+Architecting+distributed+%26+high-load+systems;%3E+High-concurrency+engines+in+C%2B%2B+%26+Go;%3E+Backend+microservices+with+C%23+%26+Python;%3E+Zero-cost+abstractions+%26+clean+code" alt="Typing SVG" />
   </p>
 
   <!-- System Subheader -->
@@ -19,15 +17,9 @@
 
   <!-- Social Badges + Minimalist Views Counter -->
   <p align="center">
-    <a href="https://t.me/tabyru" target="_blank">
-      <img src="https://img.shields.io/badge/TELEGRAM-@tabyru-0D0D0D?style=for-the-badge&logo=telegram&logoColor=white&labelColor=000000" alt="Telegram" />
-    </a>
-    <a href="https://x.com/devodrag" target="_blank">
-      <img src="https://img.shields.io/badge/X-@devodrag-0D0D0D?style=for-the-badge&logo=x&logoColor=white&labelColor=000000" alt="X" />
-    </a>
-    <a href="https://discord.com" target="_blank">
-      <img src="https://img.shields.io/badge/DISCORD-swift.dat-0D0D0D?style=for-the-badge&logo=discord&logoColor=white&labelColor=000000" alt="Discord" />
-    </a>
+    <a href="https://t.me/tabyru"><img src="https://img.shields.io/badge/TELEGRAM-@tabyru-0D0D0D?style=for-the-badge&logo=telegram&logoColor=white&labelColor=000000" alt="Telegram" /></a>&nbsp;
+    <a href="https://x.com/devodrag"><img src="https://img.shields.io/badge/X-@devodrag-0D0D0D?style=for-the-badge&logo=x&logoColor=white&labelColor=000000" alt="X" /></a>&nbsp;
+    <a href="https://discord.com"><img src="https://img.shields.io/badge/DISCORD-swift.dat-0D0D0D?style=for-the-badge&logo=discord&logoColor=white&labelColor=000000" alt="Discord" /></a>&nbsp;
     <img src="https://komarev.com/ghpvc/?username=devodrag&label=VIEWS&color=0D0D0D&style=for-the-badge" alt="Views" />
   </p>
 
@@ -144,3 +136,4 @@ identity:
 + [2024] Microservices architecture & API design in C# .NET / Python
 ! Priority: Low Latency, Scalability, Clean Architecture
 ```
+
