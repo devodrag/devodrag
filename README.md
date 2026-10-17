@@ -5,12 +5,19 @@
 
   <br/><br/>
 
+  <!-- Dynamic Typing Subtitle (Console Style) -->
+  <p align="center">
+    <a href="https://github.com/devodrag">
+      <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=15&pause=1200&color=FFFFFF&center=true&vCenter=true&width=550&lines=%3E+Architecting+distributed+%26+high-load+systems;%3E+High-concurrency+engines+in+C%2B%2B+%26+Go;%3E+Backend+microservices+with+C%23+%26+Python;%3E+Zero-cost+abstractions+%26+clean+code" alt="Typing SVG" />
+    </a>
+  </p>
+
   <!-- System Subheader -->
   <p align="center">
     <code><b>( • ) SYSTEM ONLINE &nbsp;|&nbsp; KERNEL 0x7F &nbsp;|&nbsp; BACKEND ARCHITECT</b></code>
   </p>
 
-  <!-- Social & Contact Badges -->
+  <!-- Social Badges + Minimalist Views Counter -->
   <p align="center">
     <a href="https://t.me/tabyru" target="_blank">
       <img src="https://img.shields.io/badge/TELEGRAM-@tabyru-0D0D0D?style=for-the-badge&logo=telegram&logoColor=white&labelColor=000000" alt="Telegram" />
@@ -21,6 +28,7 @@
     <a href="https://discord.com" target="_blank">
       <img src="https://img.shields.io/badge/DISCORD-swift.dat-0D0D0D?style=for-the-badge&logo=discord&logoColor=white&labelColor=000000" alt="Discord" />
     </a>
+    <img src="https://komarev.com/ghpvc/?username=devodrag&label=VIEWS&color=0D0D0D&style=for-the-badge" alt="Views" />
   </p>
 
   <br/>
@@ -118,7 +126,17 @@ identity:
 
 ---
 
-### <code>( 04 ) // SYSTEM LOGS</code>
+### <code>( 04 ) // ACTIVITY GLYPH // SNAKE</code>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/devodrag/devodrag/output/github-contribution-grid-snake-dark.svg" alt="Nothing Style Snake Game" width="100%" />
+</div>
+
+<br/>
+
+---
+
+### <code>( 05 ) // SYSTEM LOGS</code>
 
 ```diff
 + [2026] Distributed systems & high-throughput backend services
@@ -126,5 +144,3 @@ identity:
 + [2024] Microservices architecture & API design in C# .NET / Python
 ! Priority: Low Latency, Scalability, Clean Architecture
 ```
-
----
